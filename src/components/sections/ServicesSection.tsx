@@ -1,17 +1,38 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { services } from '@/data/mockData';
-import { Home, Building2, Palette, Hammer, LucideIcon } from 'lucide-react';
+import { useLanguage } from '@/lib/i18n';
+import { Home, Building2, ClipboardCheck, Shield, LucideIcon } from 'lucide-react';
 
-const iconMap: Record<string, LucideIcon> = {
-  Home,
-  Building2,
-  Palette,
-  Hammer,
-};
+const services = [
+  {
+    id: 'architectural',
+    titleKey: 'services.architectural.title',
+    descriptionKey: 'services.architectural.description',
+    Icon: Home,
+  },
+  {
+    id: 'urban',
+    titleKey: 'services.urban.title',
+    descriptionKey: 'services.urban.description',
+    Icon: Building2,
+  },
+  {
+    id: 'supervision',
+    titleKey: 'services.supervision.title',
+    descriptionKey: 'services.supervision.description',
+    Icon: ClipboardCheck,
+  },
+  {
+    id: 'safety',
+    titleKey: 'services.safety.title',
+    descriptionKey: 'services.safety.description',
+    Icon: Shield,
+  },
+];
 
 export function ServicesSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -26,17 +47,17 @@ export function ServicesSection() {
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-            Services
+            {t('services.label')}
           </p>
           <h2 className="font-serif text-heading-lg text-balance">
-            How We Can Help
+            {t('services.title')}
           </h2>
         </motion.div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => {
-            const IconComponent = iconMap[service.icon] || Home;
+            const IconComponent = service.Icon;
             return (
               <motion.div
                 key={service.id}
@@ -50,9 +71,9 @@ export function ServicesSection() {
                     <IconComponent size={24} className="text-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl mb-3">{service.title}</h3>
+                    <h3 className="font-serif text-xl mb-3">{t(service.titleKey)}</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
+                      {t(service.descriptionKey)}
                     </p>
                   </div>
                 </div>

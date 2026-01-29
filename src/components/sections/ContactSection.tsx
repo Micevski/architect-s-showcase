@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { siteContent } from '@/data/mockData';
+import { useLanguage } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -10,11 +11,12 @@ import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function ContactSection() {
-  const { contact, about } = siteContent;
+  const { t } = useLanguage();
+  const { contact } = siteContent;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,15 +27,15 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     toast({
-      title: 'Message sent',
-      description: "Thank you for reaching out. I'll be in touch soon.",
+      title: t('contact.form.success.title'),
+      description: t('contact.form.success.description'),
     });
-    
+
     setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
@@ -49,14 +51,13 @@ export function ContactSection() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-              Contact
+              {t('contact.label')}
             </p>
             <h2 className="font-serif text-heading-lg mb-6">
-              Let's Discuss Your Project
+              {t('contact.title')}
             </h2>
             <p className="text-muted-foreground mb-12 leading-relaxed">
-              Every great project begins with a conversation. Whether you're dreaming of a new home, 
-              reimagining an existing space, or planning a commercial venture, I'd love to hear about your vision.
+              {t('contact.description')}
             </p>
 
             <div className="space-y-6">
@@ -65,8 +66,8 @@ export function ContactSection() {
                   <Mail size={18} className="text-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Email</p>
-                  <a 
+                  <p className="text-sm text-muted-foreground mb-1">{t('contact.email')}</p>
+                  <a
                     href={`mailto:${contact.email}`}
                     className="text-foreground hover:text-muted-foreground transition-colors"
                   >
@@ -80,8 +81,8 @@ export function ContactSection() {
                   <Phone size={18} className="text-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Phone</p>
-                  <a 
+                  <p className="text-sm text-muted-foreground mb-1">{t('contact.phone')}</p>
+                  <a
                     href={`tel:${contact.phone}`}
                     className="text-foreground hover:text-muted-foreground transition-colors"
                   >
@@ -95,7 +96,7 @@ export function ContactSection() {
                   <MapPin size={18} className="text-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Studio</p>
+                  <p className="text-sm text-muted-foreground mb-1">{t('contact.studio')}</p>
                   <p className="text-foreground whitespace-pre-line">{contact.address}</p>
                 </div>
               </div>
@@ -112,7 +113,7 @@ export function ContactSection() {
               <div className="space-y-6">
                 <div>
                   <Label htmlFor="name" className="text-sm text-muted-foreground">
-                    Name
+                    {t('contact.form.name')}
                   </Label>
                   <Input
                     id="name"
@@ -125,7 +126,7 @@ export function ContactSection() {
 
                 <div>
                   <Label htmlFor="email" className="text-sm text-muted-foreground">
-                    Email
+                    {t('contact.form.email')}
                   </Label>
                   <Input
                     id="email"
@@ -139,7 +140,7 @@ export function ContactSection() {
 
                 <div>
                   <Label htmlFor="message" className="text-sm text-muted-foreground">
-                    Tell me about your project
+                    {t('contact.form.message')}
                   </Label>
                   <Textarea
                     id="message"
@@ -156,7 +157,7 @@ export function ContactSection() {
                   disabled={isSubmitting}
                   className="w-full rounded-none h-12 bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                 </Button>
               </div>
             </form>

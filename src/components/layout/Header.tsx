@@ -3,17 +3,20 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-
-const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
-];
+import { useLanguage } from '@/lib/i18n';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export function Header() {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: '#about', labelKey: 'nav.about' },
+    { href: '#services', labelKey: 'nav.services' },
+    { href: '#projects', labelKey: 'nav.projects' },
+    { href: '#contact', labelKey: 'nav.contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,38 +53,44 @@ export function Header() {
             isScrolled ? 'text-foreground' : 'text-primary-foreground'
           )}
         >
-          Elena Vasquez
+          {t('about.name')}
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className={cn(
-                  'text-sm tracking-wide transition-colors hover:opacity-70',
-                  isScrolled ? 'text-foreground' : 'text-primary-foreground'
-                )}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={cn(
+                    'text-sm tracking-wide transition-colors hover:opacity-70',
+                    isScrolled ? 'text-foreground' : 'text-primary-foreground'
+                  )}
+                >
+                  {t(link.labelKey)}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <LanguageSwitcher variant={isScrolled ? 'dark' : 'light'} />
+        </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={cn(
-            'md:hidden p-2 transition-colors',
-            isScrolled ? 'text-foreground' : 'text-primary-foreground'
-          )}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher variant={isScrolled ? 'dark' : 'light'} />
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={cn(
+              'p-2 transition-colors',
+              isScrolled ? 'text-foreground' : 'text-primary-foreground'
+            )}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -101,7 +110,7 @@ export function Header() {
                     onClick={(e) => handleNavClick(e, link.href)}
                     className="block text-lg text-foreground hover:text-muted-foreground transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}

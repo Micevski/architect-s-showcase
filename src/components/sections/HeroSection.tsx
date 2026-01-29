@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { siteContent } from '@/data/mockData';
+import { useLanguage } from '@/lib/i18n';
 import { ChevronDown } from 'lucide-react';
 
 export function HeroSection() {
-  const { hero } = siteContent;
+  const { t } = useLanguage();
 
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
@@ -32,7 +32,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-display mb-6 text-balance"
         >
-          {hero.tagline}
+          {t('hero.tagline')}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-body-lg text-primary-foreground/80 max-w-xl mx-auto"
         >
-          {hero.subtitle}
+          {t('hero.subtitle')}
         </motion.p>
       </div>
 

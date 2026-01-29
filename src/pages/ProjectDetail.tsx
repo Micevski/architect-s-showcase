@@ -1,21 +1,39 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/mockData';
+import { useLanguage } from '@/lib/i18n';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const ProjectDetail = () => {
+  const { t } = useLanguage();
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
-  
+
+  const getProjectTitle = (projectId: string) => {
+    const key = `project.${projectId}.title`;
+    const translated = t(key);
+    return translated !== key ? translated : projects.find(p => p.id === projectId)?.title || '';
+  };
+
+  const getProjectDescription = (projectId: string) => {
+    const key = `project.${projectId}.description`;
+    const translated = t(key);
+    return translated !== key ? translated : projects.find(p => p.id === projectId)?.description || '';
+  };
+
+  const getCategoryLabel = (category: string) => {
+    return t(`projects.category.${category}`);
+  };
+
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-serif text-heading-lg mb-4">Project Not Found</h1>
+          <h1 className="font-serif text-heading-lg mb-4">{t('projectDetail.notFound')}</h1>
           <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
-            Return to Home
+            {t('projectDetail.returnHome')}
           </Link>
         </div>
       </div>
@@ -30,7 +48,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main>
         {/* Hero Image */}
         <motion.section
@@ -41,7 +59,7 @@ const ProjectDetail = () => {
         >
           <img
             src={project.images[0]}
-            alt={project.title}
+            alt={getProjectTitle(project.id)}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-hero-overlay/30" />
@@ -63,12 +81,12 @@ const ProjectDetail = () => {
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
                 >
                   <ArrowLeft size={16} />
-                  Back to Projects
+                  {t('projectDetail.backToProjects')}
                 </Link>
-                
-                <h1 className="font-serif text-heading-lg mb-6">{project.title}</h1>
+
+                <h1 className="font-serif text-heading-lg mb-6">{getProjectTitle(project.id)}</h1>
                 <p className="text-body-lg text-muted-foreground leading-relaxed mb-8">
-                  {project.description}
+                  {getProjectDescription(project.id)}
                 </p>
               </motion.div>
 
@@ -81,21 +99,21 @@ const ProjectDetail = () => {
               >
                 <div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                    Location
+                    {t('projectDetail.location')}
                   </p>
                   <p className="text-foreground">{project.location}</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                    Year
+                    {t('projectDetail.year')}
                   </p>
                   <p className="text-foreground">{project.year}</p>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
-                    Category
+                    {t('projectDetail.category')}
                   </p>
-                  <p className="text-foreground capitalize">{project.category}</p>
+                  <p className="text-foreground capitalize">{getCategoryLabel(project.category)}</p>
                 </div>
               </motion.div>
             </div>
@@ -117,7 +135,7 @@ const ProjectDetail = () => {
                   >
                     <img
                       src={image}
-                      alt={`${project.title} - Image ${index + 2}`}
+                      alt={`${getProjectTitle(project.id)} - ${index + 2}`}
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -138,27 +156,27 @@ const ProjectDetail = () => {
                 >
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2 flex items-center gap-2">
                     <ArrowLeft size={14} />
-                    Previous Project
+                    {t('projectDetail.prevProject')}
                   </p>
                   <p className="font-serif text-xl group-hover:text-muted-foreground transition-colors">
-                    {prevProject.title}
+                    {getProjectTitle(prevProject.id)}
                   </p>
                 </Link>
               ) : (
                 <div className="py-12 pr-8 border-r border-border" />
               )}
-              
+
               {nextProject ? (
                 <Link
                   to={`/project/${nextProject.id}`}
                   className="group py-12 pl-8 text-right"
                 >
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2 flex items-center justify-end gap-2">
-                    Next Project
+                    {t('projectDetail.nextProject')}
                     <ArrowRight size={14} />
                   </p>
                   <p className="font-serif text-xl group-hover:text-muted-foreground transition-colors">
-                    {nextProject.title}
+                    {getProjectTitle(nextProject.id)}
                   </p>
                 </Link>
               ) : (

@@ -3,11 +3,23 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { projects } from '@/data/mockData';
+import { useLanguage } from '@/lib/i18n';
 import { ArrowUpRight } from 'lucide-react';
 
 export function ProjectsSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const getCategoryLabel = (category: string) => {
+    return t(`projects.category.${category}`);
+  };
+
+  const getProjectTitle = (projectId: string) => {
+    const key = `project.${projectId}.title`;
+    const translated = t(key);
+    return translated !== key ? translated : projects.find(p => p.id === projectId)?.title || '';
+  };
 
   return (
     <section id="projects" className="section-padding bg-background" ref={ref}>
@@ -20,10 +32,10 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-            Portfolio
+            {t('projects.label')}
           </p>
           <h2 className="font-serif text-heading-lg text-balance">
-            Selected Projects
+            {t('projects.title')}
           </h2>
         </motion.div>
 
@@ -43,7 +55,7 @@ export function ProjectsSection() {
                 <div className="relative aspect-[4/3] overflow-hidden mb-4">
                   <img
                     src={project.images[0]}
-                    alt={project.title}
+                    alt={getProjectTitle(project.id)}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />
@@ -53,10 +65,10 @@ export function ProjectsSection() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
-                    {project.category} · {project.year}
+                    {getCategoryLabel(project.category)} · {project.year}
                   </p>
                   <h3 className="font-serif text-xl mb-2 group-hover:text-muted-foreground transition-colors">
-                    {project.title}
+                    {getProjectTitle(project.id)}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {project.location}

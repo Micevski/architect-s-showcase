@@ -1,7 +1,9 @@
 import { siteContent } from '@/data/mockData';
+import { useLanguage } from '@/lib/i18n';
 import { Instagram, Linkedin, ArrowUp } from 'lucide-react';
 
 export function Footer() {
+  const { t } = useLanguage();
   const { contact, about } = siteContent;
 
   const scrollToTop = () => {
@@ -14,16 +16,18 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-2xl mb-4">{about.name}</h3>
+            <h3 className="font-serif text-2xl mb-4">{t('about.name')}</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              {about.title}<br />
-              Creating thoughtful spaces since {new Date().getFullYear() - about.yearsExperience}.
+              {t('about.title')}<br />
+              {t('footer.since')} {new Date().getFullYear() - about.yearsExperience}.
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4 text-primary-foreground/50">Contact</h4>
+            <h4 className="text-sm uppercase tracking-wider mb-4 text-primary-foreground/50">
+              {t('footer.contact')}
+            </h4>
             <div className="space-y-2 text-sm text-primary-foreground/70">
               <p>{contact.email}</p>
               <p>{contact.phone}</p>
@@ -33,7 +37,9 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider mb-4 text-primary-foreground/50">Follow</h4>
+            <h4 className="text-sm uppercase tracking-wider mb-4 text-primary-foreground/50">
+              {t('footer.follow')}
+            </h4>
             <div className="flex gap-4">
               {contact.socialLinks.instagram && (
                 <a
@@ -64,7 +70,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex items-center justify-between pt-8 border-t border-primary-foreground/10">
           <p className="text-xs text-primary-foreground/50">
-            © {new Date().getFullYear()} {about.name}. All rights reserved.
+            © {new Date().getFullYear()} {t('about.name')}. {t('footer.rights')}
           </p>
           <button
             onClick={scrollToTop}
