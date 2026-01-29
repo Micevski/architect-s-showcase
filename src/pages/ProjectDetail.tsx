@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/mockData';
 import { useLanguage } from '@/lib/i18n';
@@ -10,6 +11,11 @@ const ProjectDetail = () => {
   const { t } = useLanguage();
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
+
+  // Scroll to top when component mounts or project changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const getProjectTitle = (projectId: string) => {
     const key = `project.${projectId}.title`;

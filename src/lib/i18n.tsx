@@ -56,29 +56,61 @@ export const translations = {
     'projects.category.renovation': 'Реновирање',
 
     // Project items
-    'project.modern-family-residence.title': 'Современа семејна куќа',
-    'project.modern-family-residence.short': 'Современа семејна куќа со отворен план на живеење',
-    'project.modern-family-residence.description': 'Модерен станбен проект со чисти линии и функционални простори. Дизајнот максимизира природна светлина преку стратешко поставување на прозорци додека обезбедува удобни простори за живеење за растечко семејство.',
+    'project.family-house-kochani.title': 'Семејна куќа Кочани',
+    'project.family-house-kochani.short': 'Модерна семејна куќа со елегантна игра на волумени и материјали',
+    'project.family-house-kochani.description': 'Современ концепт на семејна куќа. Преку игра на волумени, форми и материјали создаден е еден префинет, елегантен изглед на пространа семејна куќа што комбинира модерна естетика со функционални простори за живеење.',
 
-    'project.weekend-retreat.title': 'Викенд куќа',
-    'project.weekend-retreat.short': 'Мирна викенд куќа дизајнирана за релаксација',
-    'project.weekend-retreat.description': 'Овој проект за викенд куќа обезбедува бегство од урбаниот живот. Дизајнот вклучува отворени тераси, поврзаност со природата и ефикасно користење на просторот.',
+    'project.winery.title': 'Винарија',
+    'project.winery.short': 'Компактна винарија што ги спојува традицијата и модерниот дизајн',
+    'project.winery.description': 'Преку симбиоза на ново и старо и користење на локален материјал дефиниран е мал и компактен објект кој по својата форма е дијаметрално спротивен од околината но со материјализацијата е целосно вклопен во целокупната слика на пејзажот.',
 
-    'project.commercial-complex.title': 'Комерцијален комплекс',
-    'project.commercial-complex.short': 'Повеќенаменски комерцијален објект со современи удобности',
-    'project.commercial-complex.description': 'Комерцијален развоен проект вклучувајќи малопродажни и канцелариски простори. Дизајнот приоритизира функционалност и пристапност.',
+    'project.hotel-rooms.title': 'Хотелски ентериер',
+    'project.hotel-rooms.short': 'Модерни хотелски соби со топла, елегантна атмосфера',
+    'project.hotel-rooms.description': 'Модерен и топол амбиент преку едноставни форми и текстури. Чист и елегантен изглед што создава удобна и привлечна атмосфера за гостите, балансирајќи функционалност со софистицирани дизајнерски елементи.',
 
-    'project.residential-extension.title': 'Доградба на куќа',
-    'project.residential-extension.short': 'Промислена доградба на постоечка семејна куќа',
-    'project.residential-extension.description': 'Овој проект за реновирање вклучуваше проширување на постоечка резиденција за да се задоволат растечките потреби на семејството.',
+    'project.residential-karpos.title': 'Станбена зграда Карпош',
+    'project.residential-karpos.short': 'Современа мала станбена зграда со удобни станови',
+    'project.residential-karpos.description': 'Мала станбена зграда со современ концепт наменета за удобно живеење. Проектот вклучува комотни станови со подземен паркинг, комбинирајќи модерен архитектонски јазик со практични решенија за живеење.',
 
-    'project.apartment-interior.title': 'Ентериер на стан',
-    'project.apartment-interior.short': 'Комплетен дизајн на ентериер со детали за мебел',
-    'project.apartment-interior.description': 'Сеопфатен проект за внатрешна архитектура со 2Д и 3Д цртежи со детални дизајни на мебел.',
+    'project.residential-shtip-2.title': 'Станбен комплекс Штип',
+    'project.residential-shtip-2.short': 'Модерен станбен комплекс со комерцијални простори',
+    'project.residential-shtip-2.description': 'Станбен комплекс со комерцијални станови и модерен изглед. Дизајнот вклучува деловен простор на приземје и подземен паркинг, создавајќи мешовит развој што служи и за станбени и за комерцијални потреби.',
 
-    'project.hillside-villa.title': 'Вила на падина',
-    'project.hillside-villa.short': 'Елегантна вила која го искористува природниот терен',
-    'project.hillside-villa.description': 'Станбен проект кој работи со природниот наклон на теренот за да создаде драматични простори за живеење со панорамски погледи.',
+    'project.facade-renovation.title': 'Фасадно решение',
+    'project.facade-renovation.short': 'Модерна трансформација на постоечка семејна куќа',
+    'project.facade-renovation.description': 'Со реструктуирање на постојните форми и волумени преку современа материјализација дизајниран е нов и современ изглед на постоечка семејна куќа. Покрај модернизацијата добиен е и енергетски ефикасен објект.',
+
+    'project.family-house-gevgelija.title': 'Семејна куќа Гевгелија',
+    'project.family-house-gevgelija.short': 'Симбиоза на класичен и модерен архитектонски израз',
+    'project.family-house-gevgelija.description': 'Семејна куќа - фасадно решение што постигнува симбиоза на класичен и модерен изглед. Чисти форми и едноставен израз го дефинираат овој проект, создавајќи безвременска естетика што ги поврзува традиционалниот и современиот архитектонски јазик.',
+
+    'project.residential-kochani.title': 'Станбена зграда Кочани',
+    'project.residential-kochani.short': 'Модерен станбен комплекс со функционални станови',
+    'project.residential-kochani.description': 'Станбен комплекс со модерен изглед, функционални и компактни станбени единици. Проектот вклучува подземно паркирање и деловен простор на приземје, создавајќи комплетна животна средина.',
+
+    'project.hospital-vasilevo.title': 'Специјална болница Василево',
+    'project.hospital-vasilevo.short': 'Модерна специјализирана болница со две фасадни варијанти',
+    'project.hospital-vasilevo.description': 'Модерно и современо концептуално решение на специјализирана болница со две фасадни решенија. Едноставен концепт и чисти форми прилагодени на функцијата на објектот, создавајќи средина погодна за лекување.',
+
+    'project.hospital-shtip.title': 'Специјална болница Штип',
+    'project.hospital-shtip.short': 'Современ дизајн на специјализирана медицинска установа',
+    'project.hospital-shtip.description': 'Модерно и современо концептуално решение на специјализирана болница. Едноставен концепт и чисти форми прилагодени на функцијата на објектот, давајќи приоритет на грижата за пациентите и медицинската ефикасност.',
+
+    'project.industrial-building.title': 'Индустриски објект',
+    'project.industrial-building.short': 'Функционален индустриски објект во постоечки комплекс',
+    'project.industrial-building.description': 'Индустриски објект во склоп на постоечки комплекс дефиниран врз основа на функционалните и локациските барања. Проектот одговара на специфичните индустриски потреби додека се интегрира со околната изградена средина.',
+
+    'project.family-house-shtip.title': 'Семејна куќа Штип',
+    'project.family-house-shtip.short': 'Модерна семејна куќа со четири станбени единици',
+    'project.family-house-shtip.description': 'Современ концепт на семејна куќа со 4 станбени единици во духот на модерната архитектура. Дизајнот ги прифаќа чистите линии и функционалните простори додека создава различни животни средини во рамките на унифицирана архитектонска визија.',
+
+    'project.residential-shtip.title': 'Станбен комплекс Сењак',
+    'project.residential-shtip.short': 'Современ станбен комплекс со две згради',
+    'project.residential-shtip.description': 'Современ станбен комплекс формиран од две ламели. Проектот вклучува влезови и пристапи на повеќе нивоа, заедно со паркинг простор и деловни содржини, создавајќи комплетна урбана животна средина.',
+
+    'project.bedroom-interior.title': 'Ентериер на спална',
+    'project.bedroom-interior.short': 'Модерен и топол дизајн на спална соба',
+    'project.bedroom-interior.description': 'Модерен и едноставен топол изглед на спална соба. Проектот демонстрира внимание кон деталите во создавањето удобни, естетски пријатни простори за живеење.',
 
     // Contact
     'contact.label': 'Контакт',
@@ -160,29 +192,61 @@ export const translations = {
     'projects.category.renovation': 'Renovation',
 
     // Project items
-    'project.modern-family-residence.title': 'Modern Family Residence',
-    'project.modern-family-residence.short': 'Contemporary family home with open-plan living spaces',
-    'project.modern-family-residence.description': 'A modern residential project featuring clean lines and functional spaces. The design maximizes natural light through strategic window placement while providing comfortable living areas for a growing family.',
+    'project.family-house-kochani.title': 'Family House Kochani',
+    'project.family-house-kochani.short': 'Modern family home with elegant play of volumes and materials',
+    'project.family-house-kochani.description': 'A contemporary family house concept that achieves a refined, elegant appearance through the interplay of volumes, forms, and materials. The spacious design combines modern aesthetics with functional living spaces, creating a harmonious blend of style and comfort.',
 
-    'project.weekend-retreat.title': 'Weekend Retreat',
-    'project.weekend-retreat.short': 'A peaceful weekend house designed for relaxation',
-    'project.weekend-retreat.description': 'This weekend house project provides an escape from urban life. The design features open terraces, connection to nature, and efficient use of space.',
+    'project.winery.title': 'Winery',
+    'project.winery.short': 'Compact winery blending tradition with modern design',
+    'project.winery.description': 'Through a symbiosis of old and new, utilizing local materials, this compact winery achieves a form that contrasts with its surroundings while seamlessly integrating into the landscape through its materialization. The design respects the winemaking tradition while introducing contemporary architectural elements.',
 
-    'project.commercial-complex.title': 'Commercial Complex',
-    'project.commercial-complex.short': 'Multi-purpose commercial building with modern amenities',
-    'project.commercial-complex.description': 'A commercial development project including retail and office spaces. The design prioritizes functionality and accessibility.',
+    'project.hotel-rooms.title': 'Hotel Interior Design',
+    'project.hotel-rooms.short': 'Modern hotel rooms with warm, elegant atmosphere',
+    'project.hotel-rooms.description': 'A hotel interior design project featuring modern and warm ambiance achieved through simple forms and textures. The clean, elegant aesthetic creates a comfortable and inviting atmosphere for guests, balancing functionality with sophisticated design elements.',
 
-    'project.residential-extension.title': 'Residential Extension',
-    'project.residential-extension.short': 'Thoughtful addition to an existing family home',
-    'project.residential-extension.description': 'This renovation project involved extending an existing residence to accommodate growing family needs.',
+    'project.residential-karpos.title': 'Residential Building Karpos',
+    'project.residential-karpos.short': 'Contemporary small residential building with comfortable apartments',
+    'project.residential-karpos.description': 'A small residential building featuring a contemporary concept designed for comfortable living. The project includes spacious apartments with underground parking, combining modern architectural language with practical living solutions.',
 
-    'project.apartment-interior.title': 'Apartment Interior',
-    'project.apartment-interior.short': 'Complete interior design with custom furniture details',
-    'project.apartment-interior.description': 'A comprehensive interior architecture project featuring 2D and 3D drawings with detailed furniture designs.',
+    'project.residential-shtip-2.title': 'Residential Complex Shtip',
+    'project.residential-shtip-2.short': 'Modern residential complex with commercial spaces',
+    'project.residential-shtip-2.description': 'A residential complex featuring commercial apartments with a modern appearance. The design includes business premises on the ground floor and underground parking, creating a mixed-use development that serves both residential and commercial needs.',
 
-    'project.hillside-villa.title': 'Hillside Villa',
-    'project.hillside-villa.short': 'Elegant villa taking advantage of natural terrain',
-    'project.hillside-villa.description': 'A residential project that works with the natural slope of the land to create dramatic living spaces with panoramic views.',
+    'project.facade-renovation.title': 'Facade Renovation',
+    'project.facade-renovation.short': 'Modern transformation of existing family house',
+    'project.facade-renovation.description': 'Through restructuring existing forms and volumes with contemporary materialization, a new modern appearance was designed for an existing family house. Beyond modernization, the project achieved improved energy efficiency, combining aesthetic renewal with sustainable building practices.',
+
+    'project.family-house-gevgelija.title': 'Family House Gevgelija',
+    'project.family-house-gevgelija.short': 'Symbiosis of classic and modern architectural expression',
+    'project.family-house-gevgelija.description': 'A family house facade design that achieves a symbiosis of classic and modern appearance. Clean forms and simple expression define this project, creating a timeless aesthetic that bridges traditional and contemporary architectural language.',
+
+    'project.residential-kochani.title': 'Residential Building Kochani',
+    'project.residential-kochani.short': 'Modern residential complex with functional apartments',
+    'project.residential-kochani.description': 'A residential complex with modern appearance featuring functional and compact residential units. The project includes underground parking and business premises on the ground floor, creating a comprehensive living environment.',
+
+    'project.hospital-vasilevo.title': 'Special Hospital Vasilevo',
+    'project.hospital-vasilevo.short': 'Modern specialized hospital with two facade variants',
+    'project.hospital-vasilevo.description': 'A modern and contemporary conceptual design for a specialized hospital featuring two facade solutions. The simple concept and clean forms are adapted to the functional requirements of the medical facility, creating an environment conducive to healing.',
+
+    'project.hospital-shtip.title': 'Special Hospital Shtip',
+    'project.hospital-shtip.short': 'Contemporary specialized medical facility design',
+    'project.hospital-shtip.description': 'A modern and contemporary conceptual solution for a specialized hospital. The simple concept and clean forms are tailored to the function of the building, prioritizing patient care and medical efficiency while maintaining architectural excellence.',
+
+    'project.industrial-building.title': 'Industrial Building',
+    'project.industrial-building.short': 'Functional industrial facility within existing complex',
+    'project.industrial-building.description': 'An industrial building designed as part of an existing complex, defined by functional and locational requirements. The project responds to specific industrial needs while integrating with the surrounding built environment.',
+
+    'project.family-house-shtip.title': 'Family House Shtip',
+    'project.family-house-shtip.short': 'Modern family house with four residential units',
+    'project.family-house-shtip.description': 'A contemporary family house concept featuring four residential units in the spirit of modern architecture. The design embraces clean lines and functional spaces while creating distinct living environments within a unified architectural vision.',
+
+    'project.residential-shtip.title': 'Residential Complex Senjak',
+    'project.residential-shtip.short': 'Contemporary residential complex with two buildings',
+    'project.residential-shtip.description': 'A contemporary residential complex formed by two building blocks. The project features entrances and access points on multiple levels, along with parking space and business facilities, creating a comprehensive urban living environment.',
+
+    'project.bedroom-interior.title': 'Bedroom Interior',
+    'project.bedroom-interior.short': 'Modern and warm bedroom design',
+    'project.bedroom-interior.description': 'A modern and simple bedroom interior design featuring a warm, inviting atmosphere. The project demonstrates attention to detail in creating comfortable, aesthetically pleasing living spaces.',
 
     // Contact
     'contact.label': 'Contact',
