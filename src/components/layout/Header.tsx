@@ -29,10 +29,20 @@ export function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (isMobileMenuOpen) {
+      // Close menu first, then scroll after animation completes
+      setIsMobileMenuOpen(false);
+      setTimeout(() => {
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    } else {
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
