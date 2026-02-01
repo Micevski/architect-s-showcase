@@ -322,7 +322,7 @@ export const siteContent: SiteContent = {
     yearsExperience: 10,
     projectsCompleted: 50,
     awards: 6,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+    image: `${IMAGE_BASE_URL}/ljubica-img.jpeg`,
   },
   contact: {
     email: 'micevska.ljubica@yahoo.com',
