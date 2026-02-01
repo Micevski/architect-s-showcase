@@ -126,6 +126,8 @@ export const translations = {
     'contact.form.sending': 'Се испраќа...',
     'contact.form.success.title': 'Пораката е испратена',
     'contact.form.success.description': 'Ви благодарам што се јавивте. Ќе ви одговорам наскоро.',
+    'contact.form.error.title': 'Грешка при испраќање',
+    'contact.form.error.description': 'Пораката не можеше да се испрати. Ве молам обидете се повторно или контактирајте ме директно.',
 
     // Footer
     'footer.since': 'Создавање промислени простори од',
@@ -262,6 +264,8 @@ export const translations = {
     'contact.form.sending': 'Sending...',
     'contact.form.success.title': 'Message sent',
     'contact.form.success.description': "Thank you for reaching out. I'll be in touch soon.",
+    'contact.form.error.title': 'Failed to send',
+    'contact.form.error.description': 'Your message could not be sent. Please try again or contact me directly.',
 
     // Footer
     'footer.since': 'Creating thoughtful spaces since',

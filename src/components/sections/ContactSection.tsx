@@ -28,16 +28,49 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
 
-    toast({
-      title: t('contact.form.success.title'),
-      description: t('contact.form.success.description'),
-    });
+    if (!formspreeId) {
+      toast({
+        title: 'Configuration Error',
+        description: 'Contact form is not configured. Please contact via email.',
+        variant: 'destructive',
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: t('contact.form.success.title'),
+          description: t('contact.form.success.description'),
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch {
+      toast({
+        title: t('contact.form.error.title'),
+        description: t('contact.form.error.description'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
