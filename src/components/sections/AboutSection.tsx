@@ -16,7 +16,7 @@ export function AboutSection() {
     { value: about.awards, labelKey: 'about.stats.licenses' },
   ];
 
-  const bioKeys = ['about.bio.1', 'about.bio.2', 'about.bio.3'];
+  const bioKeys = ['about.bio.1', 'about.bio.2'];
 
   return (
     <section id="about" className="section-padding bg-background" ref={ref}>

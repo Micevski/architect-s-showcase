@@ -91,15 +91,15 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 flex items-center justify-center border border-border">
-                  <MapPin size={18} className="text-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">{t('contact.studio')}</p>
-                  <p className="text-foreground whitespace-pre-line">{contact.address}</p>
-                </div>
-              </div>
+              {/*<div className="flex items-start gap-4">*/}
+              {/*  <div className="w-10 h-10 flex items-center justify-center border border-border">*/}
+              {/*    <MapPin size={18} className="text-foreground" />*/}
+              {/*  </div>*/}
+              {/*  <div>*/}
+              {/*    <p className="text-sm text-muted-foreground mb-1">{t('contact.studio')}</p>*/}
+              {/*    /!*<p className="text-foreground whitespace-pre-line">{contact.address}</p>*!/*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           </motion.div>
 

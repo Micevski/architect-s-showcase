@@ -31,7 +31,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-primary-foreground/70">
               <p>{contact.email}</p>
               <p>{contact.phone}</p>
-              <p className="whitespace-pre-line">{contact.address}</p>
+              {/*<p className="whitespace-pre-line">{contact.address}</p>*/}
             </div>
           </div>
 
