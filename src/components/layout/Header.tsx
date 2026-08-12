@@ -56,14 +56,16 @@ export function Header() {
     >
       <nav className="container-narrow flex items-center justify-between h-20">
         {/* Logo */}
-        <Link
-          to="/"
-          className={cn(
-            'font-serif text-xl tracking-wide transition-colors',
-            isScrolled ? 'text-foreground' : 'text-primary-foreground'
-          )}
-        >
-          {t('about.name')}
+        <Link to="/" className="flex items-center" aria-label={t('about.name')}>
+          <img
+            src="/abakus-wordmark.png"
+            alt={t('about.name')}
+            className={cn(
+              'h-7 md:h-9 w-auto transition-[filter] duration-500',
+              // the mark is black ink on transparency — invert it over the dark hero
+              !isScrolled && 'invert'
+            )}
+          />
         </Link>
 
         {/* Desktop Navigation */}

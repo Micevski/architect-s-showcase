@@ -1,6 +1,7 @@
 // Project data for the architect portfolio
 
-const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Micevski/architect-s-showcase/main/public';
+// Images are served from this site's own /public directory.
+const IMAGE_BASE_URL = '';
 
 export interface Project {
   id: string;
@@ -104,36 +105,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'residential-karpos',
-    title: 'Residential Building Karpos',
-    shortDescription: 'Contemporary small residential building with comfortable apartments',
-    description: 'A small residential building featuring a contemporary concept designed for comfortable living. The project includes spacious apartments with underground parking, combining modern architectural language with practical living solutions.',
-    category: 'residential',
-    year: 2025,
-    location: 'Karpos Municipality, Skopje, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/residential-karpos/zgrada-karpos.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-karpos/zgrada-karpos-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-karpos/zgrada-karpos-3.jpg`,
-    ],
-    featured: true,
-  },
-  {
-    id: 'residential-shtip-2',
-    title: 'Residential Complex Shtip',
-    shortDescription: 'Modern residential complex with commercial spaces',
-    description: 'A residential complex featuring commercial apartments with a modern appearance. The design includes business premises on the ground floor and underground parking, creating a mixed-use development that serves both residential and commercial needs.',
-    category: 'residential',
-    year: 2024,
-    location: 'Shtip Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/residential-shtip-2/pregeg-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-shtip-2/prebeg-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-shtip-2/prebeg-3.jpg`,
-    ],
-    featured: false,
-  },
-  {
     id: 'facade-renovation',
     title: 'Facade Renovation',
     shortDescription: 'Modern transformation of existing family house',
@@ -163,103 +134,6 @@ export const projects: Project[] = [
       `${IMAGE_BASE_URL}/projects/family-house-gevgelija/kuka-istatova-4.jpg`,
       `${IMAGE_BASE_URL}/projects/family-house-gevgelija/kuka-istatova-5.jpg`,
       `${IMAGE_BASE_URL}/projects/family-house-gevgelija/kuka-istatova-6.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'residential-kochani',
-    title: 'Residential Building Kochani',
-    shortDescription: 'Modern residential complex with functional apartments',
-    description: 'A residential complex with modern appearance featuring functional and compact residential units. The project includes underground parking and business premises on the ground floor, creating a comprehensive living environment.',
-    category: 'residential',
-    year: 2023,
-    location: 'Kochani Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/residential-kochani/zgrada-kocani-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-kochani/zgrada-kocani-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-kochani/zgrada-kocani-3.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-kochani/zgrada-kocani-4.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'hospital-vasilevo',
-    title: 'Special Hospital Vasilevo',
-    shortDescription: 'Modern specialized hospital with two facade variants',
-    description: 'A modern and contemporary conceptual design for a specialized hospital featuring two facade solutions. The simple concept and clean forms are adapted to the functional requirements of the medical facility, creating an environment conducive to healing.',
-    category: 'commercial',
-    year: 2022,
-    location: 'Vasilevo Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/hospital-vasilevo/klinika-strumica-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-vasilevo/klinika-strumica-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-vasilevo/klinika-strumica-var-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-vasilevo/klinika-strumica-var-2-1.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'hospital-shtip',
-    title: 'Special Hospital Shtip',
-    shortDescription: 'Contemporary specialized medical facility design',
-    description: 'A modern and contemporary conceptual solution for a specialized hospital. The simple concept and clean forms are tailored to the function of the building, prioritizing patient care and medical efficiency while maintaining architectural excellence.',
-    category: 'commercial',
-    year: 2022,
-    location: 'Shtip Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/hospital-shtip/organziski-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-shtip/organziski-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-shtip/organziski-3.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-shtip/organizski-4.jpg`,
-      `${IMAGE_BASE_URL}/projects/hospital-shtip/organizksi-5.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'industrial-building',
-    title: 'Industrial Building',
-    shortDescription: 'Functional industrial facility within existing complex',
-    description: 'An industrial building designed as part of an existing complex, defined by functional and locational requirements. The project responds to specific industrial needs while integrating with the surrounding built environment.',
-    category: 'commercial',
-    year: 2022,
-    location: 'Vizbegovo, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/industrial-building/poliesterdej.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'family-house-shtip',
-    title: 'Family House Shtip',
-    shortDescription: 'Modern family house with four residential units',
-    description: 'A contemporary family house concept featuring four residential units in the spirit of modern architecture. The design embraces clean lines and functional spaces while creating distinct living environments within a unified architectural vision.',
-    category: 'residential',
-    year: 2020,
-    location: 'Shtip Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-3.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-4.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-5.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-6.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-7.jpg`,
-      `${IMAGE_BASE_URL}/projects/family-house-shtip/atlantik-8.jpg`,
-    ],
-    featured: false,
-  },
-  {
-    id: 'residential-shtip',
-    title: 'Residential Complex Senjak',
-    shortDescription: 'Contemporary residential complex with two buildings',
-    description: 'A contemporary residential complex formed by two building blocks. The project features entrances and access points on multiple levels, along with parking space and business facilities, creating a comprehensive urban living environment.',
-    category: 'residential',
-    year: 2020,
-    location: 'Shtip Municipality, North Macedonia',
-    images: [
-      `${IMAGE_BASE_URL}/projects/residential-shtip/senjak-1.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-shtip/senjak-2.jpg`,
-      `${IMAGE_BASE_URL}/projects/residential-shtip/senjak-3.jpg`,
     ],
     featured: false,
   },
@@ -309,27 +183,25 @@ export const services: Service[] = [
 export const siteContent: SiteContent = {
   hero: {
     tagline: 'Designing Spaces, Building Dreams',
-    subtitle: 'Licensed architect delivering complete architectural solutions from concept to construction',
+    subtitle: 'An architecture studio delivering complete solutions from concept to construction',
   },
   about: {
-    name: 'Ljubica Micevska',
-    title: 'Licensed Architect',
+    name: 'Abakus Art',
+    title: 'Architecture Studio',
     bio: [
-      'As a licensed architect with comprehensive authorizations in architectural design, revision, supervision, and urban planning, I bring a complete range of professional services to every project. My education at the Faculty of Architecture in Skopje provided a strong foundation that I continue to build upon.',
-      'With experience spanning residential, commercial, and interior projects, I specialize in developing technical documentation from conceptual designs through main projects. I coordinate all phases of project documentation and manage the entire building permit process.',
-      'Currently based in Shtip, Macedonia, I work at Studio Atrium where I handle projects of all scales—from weekend houses to capital construction projects—ensuring each receives meticulous attention to detail and professional execution.',
+      'Abakus Art is an architecture studio offering a complete range of design services, from the initial concept through main project documentation and building permit approval. With authorizations covering architectural design, revision, supervision, and urban planning, we handle every stage of a project in house.',
+      'We work across residential, commercial, and interior projects at a range of scales. Each commission receives close attention to detail, functional planning, and careful follow-through from drawing to built work.',
     ],
     yearsExperience: 10,
     projectsCompleted: 50,
     awards: 6,
-    image: `${IMAGE_BASE_URL}/ljubica-img.jpeg`,
+    image: '/abakus-logo.png',
   },
   contact: {
-    email: 'micevska.ljubica@yahoo.com',
-    phone: '+389 78 275 016',
-    address: 'Studio Atrium DOO\nShtip, North Macedonia',
-    socialLinks: {
-      linkedin: 'https://linkedin.com',
-    },
+    email: 'info@abakusart.mk',
+    // Leave blank to hide the field on the site.
+    phone: '',
+    address: '',
+    socialLinks: {},
   },
 };

@@ -45,6 +45,9 @@ export function ContactSection() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          // Without this Formspree answers with a 302 to its own thank-you page
+          // instead of JSON, and the fetch fails CORS on the redirect.
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           name: formData.name,
@@ -109,30 +112,34 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 flex items-center justify-center border border-border">
-                  <Phone size={18} className="text-foreground" />
+              {contact.phone && (
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 flex items-center justify-center border border-border">
+                    <Phone size={18} className="text-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">{t('contact.phone')}</p>
+                    <a
+                      href={`tel:${contact.phone}`}
+                      className="text-foreground hover:text-muted-foreground transition-colors"
+                    >
+                      {contact.phone}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">{t('contact.phone')}</p>
-                  <a
-                    href={`tel:${contact.phone}`}
-                    className="text-foreground hover:text-muted-foreground transition-colors"
-                  >
-                    {contact.phone}
-                  </a>
-                </div>
-              </div>
+              )}
 
-              {/*<div className="flex items-start gap-4">*/}
-              {/*  <div className="w-10 h-10 flex items-center justify-center border border-border">*/}
-              {/*    <MapPin size={18} className="text-foreground" />*/}
-              {/*  </div>*/}
-              {/*  <div>*/}
-              {/*    <p className="text-sm text-muted-foreground mb-1">{t('contact.studio')}</p>*/}
-              {/*    /!*<p className="text-foreground whitespace-pre-line">{contact.address}</p>*!/*/}
-              {/*  </div>*/}
-              {/*</div>*/}
+              {contact.address && (
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 flex items-center justify-center border border-border">
+                    <MapPin size={18} className="text-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">{t('contact.studio')}</p>
+                    <p className="text-foreground whitespace-pre-line">{contact.address}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
 

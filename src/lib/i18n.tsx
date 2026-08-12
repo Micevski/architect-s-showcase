@@ -13,22 +13,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const translations = {
   mk: {
     // Navigation
-    'nav.about': 'За мене',
+    'nav.about': 'За нас',
     'nav.services': 'Услуги',
     'nav.projects': 'Проекти',
     'nav.contact': 'Контакт',
 
     // Hero
     'hero.tagline': 'Дизајнирање простори, градење соништа',
-    'hero.subtitle': 'Овластен архитект со комплетни архитектонски решенија од концепт до реализација',
+    'hero.subtitle': 'Архитектонско студио со комплетни решенија од концепт до реализација',
 
     // About
-    'about.label': 'За мене',
-    'about.name': 'Љубица Мицевска',
-    'about.title': 'Овластен архитект',
-    'about.bio.1': 'Како овластен архитект со комплетни овластувања за проектирање, ревизија, надзор и урбанистичко планирање, нудам целосен спектар на професионални услуги за секој проект. Моето образование на Архитектонскиот факултет во Скопје обезбеди силна основа врз која продолжувам да градам.',
-    'about.bio.2': 'Со искуство во станбени, комерцијални и ентериерни проекти, се специјализирам за изработка на техничка документација од идејни решенија до основни проекти. Ја координирам целокупната проектна документација и го водам целиот процес за добивање одобрение за градење.',
-    'about.bio.3': 'Моментално работам во Студио Атриум во Штип, каде се справувам со проекти од сите размери - од викенд куќи до капитални градежни проекти - обезбедувајќи прецизно внимание на детали и професионална реализација.',
+    'about.label': 'За нас',
+    'about.name': 'Abakus Art',
+    'about.title': 'Архитектонско студио',
+    'about.bio.1': 'Абакус Арт е архитектонско студио кое нуди целосен спектар на услуги во проектирањето — од идејно решение, преку основен проект, до добивање одобрение за градење. Со овластувања за проектирање, ревизија, надзор и урбанистичко планирање, ја покриваме секоја фаза од проектот.',
+    'about.bio.2': 'Работиме на станбени, комерцијални и ентериерни проекти од различни размери. Секој проект го водиме со внимание кон деталите, функционалното планирање и квалитетот на изведбата.',
     'about.stats.experience': 'Години искуство',
     'about.stats.projects': 'Завршени проекти',
     'about.stats.licenses': 'Професионални лиценци',
@@ -68,14 +67,6 @@ export const translations = {
     'project.hotel-rooms.short': 'Модерни хотелски соби со топла, елегантна атмосфера',
     'project.hotel-rooms.description': 'Модерен и топол амбиент преку едноставни форми и текстури. Чист и елегантен изглед што создава удобна и привлечна атмосфера за гостите, балансирајќи функционалност со софистицирани дизајнерски елементи.',
 
-    'project.residential-karpos.title': 'Станбена зграда Карпош',
-    'project.residential-karpos.short': 'Современа мала станбена зграда со удобни станови',
-    'project.residential-karpos.description': 'Мала станбена зграда со современ концепт наменета за удобно живеење. Проектот вклучува комотни станови со подземен паркинг, комбинирајќи модерен архитектонски јазик со практични решенија за живеење.',
-
-    'project.residential-shtip-2.title': 'Станбен комплекс Штип',
-    'project.residential-shtip-2.short': 'Модерен станбен комплекс со комерцијални простори',
-    'project.residential-shtip-2.description': 'Станбен комплекс со комерцијални станови и модерен изглед. Дизајнот вклучува деловен простор на приземје и подземен паркинг, создавајќи мешовит развој што служи и за станбени и за комерцијални потреби.',
-
     'project.facade-renovation.title': 'Фасадно решение',
     'project.facade-renovation.short': 'Модерна трансформација на постоечка семејна куќа',
     'project.facade-renovation.description': 'Со реструктуирање на постојните форми и волумени преку современа материјализација дизајниран е нов и современ изглед на постоечка семејна куќа. Покрај модернизацијата добиен е и енергетски ефикасен објект.',
@@ -84,30 +75,6 @@ export const translations = {
     'project.family-house-gevgelija.short': 'Симбиоза на класичен и модерен архитектонски израз',
     'project.family-house-gevgelija.description': 'Семејна куќа - фасадно решение што постигнува симбиоза на класичен и модерен изглед. Чисти форми и едноставен израз го дефинираат овој проект, создавајќи безвременска естетика што ги поврзува традиционалниот и современиот архитектонски јазик.',
 
-    'project.residential-kochani.title': 'Станбена зграда Кочани',
-    'project.residential-kochani.short': 'Модерен станбен комплекс со функционални станови',
-    'project.residential-kochani.description': 'Станбен комплекс со модерен изглед, функционални и компактни станбени единици. Проектот вклучува подземно паркирање и деловен простор на приземје, создавајќи комплетна животна средина.',
-
-    'project.hospital-vasilevo.title': 'Специјална болница Василево',
-    'project.hospital-vasilevo.short': 'Модерна специјализирана болница со две фасадни варијанти',
-    'project.hospital-vasilevo.description': 'Модерно и современо концептуално решение на специјализирана болница со две фасадни решенија. Едноставен концепт и чисти форми прилагодени на функцијата на објектот, создавајќи средина погодна за лекување.',
-
-    'project.hospital-shtip.title': 'Специјална болница Штип',
-    'project.hospital-shtip.short': 'Современ дизајн на специјализирана медицинска установа',
-    'project.hospital-shtip.description': 'Модерно и современо концептуално решение на специјализирана болница. Едноставен концепт и чисти форми прилагодени на функцијата на објектот, давајќи приоритет на грижата за пациентите и медицинската ефикасност.',
-
-    'project.industrial-building.title': 'Индустриски објект',
-    'project.industrial-building.short': 'Функционален индустриски објект во постоечки комплекс',
-    'project.industrial-building.description': 'Индустриски објект во склоп на постоечки комплекс дефиниран врз основа на функционалните и локациските барања. Проектот одговара на специфичните индустриски потреби додека се интегрира со околната изградена средина.',
-
-    'project.family-house-shtip.title': 'Семејна куќа Штип',
-    'project.family-house-shtip.short': 'Модерна семејна куќа со четири станбени единици',
-    'project.family-house-shtip.description': 'Современ концепт на семејна куќа со 4 станбени единици во духот на модерната архитектура. Дизајнот ги прифаќа чистите линии и функционалните простори додека создава различни животни средини во рамките на унифицирана архитектонска визија.',
-
-    'project.residential-shtip.title': 'Станбен комплекс Сењак',
-    'project.residential-shtip.short': 'Современ станбен комплекс со две згради',
-    'project.residential-shtip.description': 'Современ станбен комплекс формиран од две ламели. Проектот вклучува влезови и пристапи на повеќе нивоа, заедно со паркинг простор и деловни содржини, создавајќи комплетна урбана животна средина.',
-
     'project.bedroom-interior.title': 'Ентериер на спална',
     'project.bedroom-interior.short': 'Модерен и топол дизајн на спална соба',
     'project.bedroom-interior.description': 'Модерен и едноставен топол изглед на спална соба. Проектот демонстрира внимание кон деталите во создавањето удобни, естетски пријатни простори за живеење.',
@@ -115,7 +82,7 @@ export const translations = {
     // Contact
     'contact.label': 'Контакт',
     'contact.title': 'Да разговараме за вашиот проект',
-    'contact.description': 'Секој одличен проект започнува со разговор. Без разлика дали сонувате за нов дом, преуредување на постоечки простор или планирате комерцијална инвестиција, би сакала да слушнам за вашата визија.',
+    'contact.description': 'Секој одличен проект започнува со разговор. Без разлика дали сонувате за нов дом, преуредување на постоечки простор или планирате комерцијална инвестиција, би сакале да слушнеме за вашата визија.',
     'contact.email': 'Е-пошта',
     'contact.phone': 'Телефон',
     'contact.studio': 'Студио',
@@ -125,9 +92,9 @@ export const translations = {
     'contact.form.submit': 'Испрати порака',
     'contact.form.sending': 'Се испраќа...',
     'contact.form.success.title': 'Пораката е испратена',
-    'contact.form.success.description': 'Ви благодарам што се јавивте. Ќе ви одговорам наскоро.',
+    'contact.form.success.description': 'Ви благодариме што се јавивте. Ќе ви одговориме наскоро.',
     'contact.form.error.title': 'Грешка при испраќање',
-    'contact.form.error.description': 'Пораката не можеше да се испрати. Ве молам обидете се повторно или контактирајте ме директно.',
+    'contact.form.error.description': 'Пораката не можеше да се испрати. Ве молиме обидете се повторно или контактирајте нè директно.',
 
     // Footer
     'footer.since': 'Создавање промислени простори од',
@@ -158,15 +125,14 @@ export const translations = {
 
     // Hero
     'hero.tagline': 'Designing Spaces, Building Dreams',
-    'hero.subtitle': 'Licensed architect delivering complete architectural solutions from concept to construction',
+    'hero.subtitle': 'An architecture studio delivering complete solutions from concept to construction',
 
     // About
     'about.label': 'About',
-    'about.name': 'Ljubica Micevska',
-    'about.title': 'Licensed Architect',
-    'about.bio.1': 'As a licensed architect with comprehensive authorizations in architectural design, revision, supervision, and urban planning, I bring a complete range of professional services to every project. My education at the Faculty of Architecture in Skopje provided a strong foundation that I continue to build upon.',
-    'about.bio.2': 'With experience spanning residential, commercial, and interior projects, I specialize in developing technical documentation from conceptual designs through main projects. I coordinate all phases of project documentation and manage the entire building permit process.',
-    'about.bio.3': 'Currently based in Shtip, Macedonia, I work at Studio Atrium where I handle projects of all scales—from weekend houses to capital construction projects—ensuring each receives meticulous attention to detail and professional execution.',
+    'about.name': 'Abakus Art',
+    'about.title': 'Architecture Studio',
+    'about.bio.1': 'Abakus Art is an architecture studio offering a complete range of design services, from the initial concept through main project documentation and building permit approval. With authorizations covering architectural design, revision, supervision, and urban planning, we handle every stage of a project in house.',
+    'about.bio.2': 'We work across residential, commercial, and interior projects at a range of scales. Each commission receives close attention to detail, functional planning, and careful follow-through from drawing to built work.',
     'about.stats.experience': 'Years Experience',
     'about.stats.projects': 'Projects Completed',
     'about.stats.licenses': 'Professional Licenses',
@@ -206,14 +172,6 @@ export const translations = {
     'project.hotel-rooms.short': 'Modern hotel rooms with warm, elegant atmosphere',
     'project.hotel-rooms.description': 'A hotel interior design project featuring modern and warm ambiance achieved through simple forms and textures. The clean, elegant aesthetic creates a comfortable and inviting atmosphere for guests, balancing functionality with sophisticated design elements.',
 
-    'project.residential-karpos.title': 'Residential Building Karpos',
-    'project.residential-karpos.short': 'Contemporary small residential building with comfortable apartments',
-    'project.residential-karpos.description': 'A small residential building featuring a contemporary concept designed for comfortable living. The project includes spacious apartments with underground parking, combining modern architectural language with practical living solutions.',
-
-    'project.residential-shtip-2.title': 'Residential Complex Shtip',
-    'project.residential-shtip-2.short': 'Modern residential complex with commercial spaces',
-    'project.residential-shtip-2.description': 'A residential complex featuring commercial apartments with a modern appearance. The design includes business premises on the ground floor and underground parking, creating a mixed-use development that serves both residential and commercial needs.',
-
     'project.facade-renovation.title': 'Facade Renovation',
     'project.facade-renovation.short': 'Modern transformation of existing family house',
     'project.facade-renovation.description': 'Through restructuring existing forms and volumes with contemporary materialization, a new modern appearance was designed for an existing family house. Beyond modernization, the project achieved improved energy efficiency, combining aesthetic renewal with sustainable building practices.',
@@ -222,30 +180,6 @@ export const translations = {
     'project.family-house-gevgelija.short': 'Symbiosis of classic and modern architectural expression',
     'project.family-house-gevgelija.description': 'A family house facade design that achieves a symbiosis of classic and modern appearance. Clean forms and simple expression define this project, creating a timeless aesthetic that bridges traditional and contemporary architectural language.',
 
-    'project.residential-kochani.title': 'Residential Building Kochani',
-    'project.residential-kochani.short': 'Modern residential complex with functional apartments',
-    'project.residential-kochani.description': 'A residential complex with modern appearance featuring functional and compact residential units. The project includes underground parking and business premises on the ground floor, creating a comprehensive living environment.',
-
-    'project.hospital-vasilevo.title': 'Special Hospital Vasilevo',
-    'project.hospital-vasilevo.short': 'Modern specialized hospital with two facade variants',
-    'project.hospital-vasilevo.description': 'A modern and contemporary conceptual design for a specialized hospital featuring two facade solutions. The simple concept and clean forms are adapted to the functional requirements of the medical facility, creating an environment conducive to healing.',
-
-    'project.hospital-shtip.title': 'Special Hospital Shtip',
-    'project.hospital-shtip.short': 'Contemporary specialized medical facility design',
-    'project.hospital-shtip.description': 'A modern and contemporary conceptual solution for a specialized hospital. The simple concept and clean forms are tailored to the function of the building, prioritizing patient care and medical efficiency while maintaining architectural excellence.',
-
-    'project.industrial-building.title': 'Industrial Building',
-    'project.industrial-building.short': 'Functional industrial facility within existing complex',
-    'project.industrial-building.description': 'An industrial building designed as part of an existing complex, defined by functional and locational requirements. The project responds to specific industrial needs while integrating with the surrounding built environment.',
-
-    'project.family-house-shtip.title': 'Family House Shtip',
-    'project.family-house-shtip.short': 'Modern family house with four residential units',
-    'project.family-house-shtip.description': 'A contemporary family house concept featuring four residential units in the spirit of modern architecture. The design embraces clean lines and functional spaces while creating distinct living environments within a unified architectural vision.',
-
-    'project.residential-shtip.title': 'Residential Complex Senjak',
-    'project.residential-shtip.short': 'Contemporary residential complex with two buildings',
-    'project.residential-shtip.description': 'A contemporary residential complex formed by two building blocks. The project features entrances and access points on multiple levels, along with parking space and business facilities, creating a comprehensive urban living environment.',
-
     'project.bedroom-interior.title': 'Bedroom Interior',
     'project.bedroom-interior.short': 'Modern and warm bedroom design',
     'project.bedroom-interior.description': 'A modern and simple bedroom interior design featuring a warm, inviting atmosphere. The project demonstrates attention to detail in creating comfortable, aesthetically pleasing living spaces.',
@@ -253,19 +187,19 @@ export const translations = {
     // Contact
     'contact.label': 'Contact',
     'contact.title': "Let's Discuss Your Project",
-    'contact.description': "Every great project begins with a conversation. Whether you're dreaming of a new home, reimagining an existing space, or planning a commercial venture, I'd love to hear about your vision.",
+    'contact.description': "Every great project begins with a conversation. Whether you're dreaming of a new home, reimagining an existing space, or planning a commercial venture, we'd love to hear about your vision.",
     'contact.email': 'Email',
     'contact.phone': 'Phone',
     'contact.studio': 'Studio',
     'contact.form.name': 'Name',
     'contact.form.email': 'Email',
-    'contact.form.message': 'Tell me about your project',
+    'contact.form.message': 'Tell us about your project',
     'contact.form.submit': 'Send Message',
     'contact.form.sending': 'Sending...',
     'contact.form.success.title': 'Message sent',
-    'contact.form.success.description': "Thank you for reaching out. I'll be in touch soon.",
+    'contact.form.success.description': "Thank you for reaching out. We'll be in touch soon.",
     'contact.form.error.title': 'Failed to send',
-    'contact.form.error.description': 'Your message could not be sent. Please try again or contact me directly.',
+    'contact.form.error.description': 'Your message could not be sent. Please try again or contact us directly.',
 
     // Footer
     'footer.since': 'Creating thoughtful spaces since',

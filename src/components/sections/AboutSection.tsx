@@ -29,11 +29,11 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[4/5] overflow-hidden bg-secondary flex items-center justify-center p-12 md:p-16">
               <img
                 src={about.image}
                 alt={t('about.name')}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             {/* Decorative element */}
