@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -8,14 +8,19 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export function Header() {
   const { t } = useLanguage();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // the sections only exist on the home page
+  const isHome = pathname === '/';
+
   const navLinks = [
-    { href: '#about', labelKey: 'nav.about' },
-    { href: '#services', labelKey: 'nav.services' },
-    { href: '#projects', labelKey: 'nav.projects' },
-    { href: '#contact', labelKey: 'nav.contact' },
+    { hash: '#about', labelKey: 'nav.about' },
+    { hash: '#services', labelKey: 'nav.services' },
+    { hash: '#projects', labelKey: 'nav.projects' },
+    { hash: '#contact', labelKey: 'nav.contact' },
   ];
 
   useEffect(() => {
@@ -26,22 +31,24 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
+
+    const go = () => {
+      if (!isHome) {
+        // route home and let Index scroll to the hash on arrival
+        navigate(`/${hash}`);
+        return;
+      }
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     if (isMobileMenuOpen) {
       // Close menu first, then scroll after animation completes
       setIsMobileMenuOpen(false);
-      setTimeout(() => {
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 300);
+      setTimeout(go, 300);
     } else {
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      go();
     }
   };
 
@@ -72,10 +79,10 @@ export function Header() {
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.hash}>
                 <a
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  href={isHome ? link.hash : `/${link.hash}`}
+                  onClick={(e) => handleNavClick(e, link.hash)}
                   className={cn(
                     'text-sm tracking-wide transition-colors hover:opacity-70',
                     isScrolled ? 'text-foreground' : 'text-primary-foreground'
@@ -116,10 +123,10 @@ export function Header() {
           >
             <ul className="container-narrow py-6 space-y-4">
               {navLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.hash}>
                   <a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                    href={isHome ? link.hash : `/${link.hash}`}
+                    onClick={(e) => handleNavClick(e, link.hash)}
                     className="block text-lg text-foreground hover:text-muted-foreground transition-colors"
                   >
                     {t(link.labelKey)}
